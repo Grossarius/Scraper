@@ -41,8 +41,7 @@ def get_product():
         return parsed
 
     # Change the input ID here
-    data = request.json
-    recipe = data.get('recipe')
+    recipe = request.json()["recipe"]
 
     # ChatGPT to help get ingredients in the recipe
     QUERIES_INPUT = f"""
